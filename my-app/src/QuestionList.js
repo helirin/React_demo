@@ -1,0 +1,61 @@
+import React from 'react';
+//haetaan kysymykset Quiz Apista
+//otetaan luontoaiheiset kysymykset listaan
+class QuestionList extends React.Component {
+    //konstruktori
+    constructor(props) {
+        super(props);
+        console.log("In QuestinList constructor");
+        this.state = {questions: [], aihe:"" };
+          //array, johon haetaan koko data
+    }
+
+    componentDidMount() {
+        console.log("In QuestionList componentDidMount");
+        //hakee kysymykset APIsta
+        //API puolestaan hakee tiedot SQL Serveriltä tietokannasta
+        fetch('https://localhost:44349/api/Kysy')
+            .then(response => response.json())
+            .then(json => {
+                console.log(json);
+                this.setState({ questions: json });
+                console.log("Component state has been modified.");
+            });
+        console.log("Fetch call has been made.");
+    }
+
+    //renderoidaan komponentin lahettamat tiedot/näkymä
+    render() {
+        console.log("In QuestionList render");
+        let list = [];
+        for (let index = 0; index < this.state.questions.length; index++) {
+            const quest = this.state.questions[index];
+            if(quest.topicId ==="Luo"){                        //& index<10
+            list.push(<tr key={index}>
+            <td><br/><p><b>{index+1}. {quest.question}</b></p>
+            <hr></hr>
+            <p>{quest.aa}</p>
+            <p>{quest.bee}</p>
+            <p>{quest.cee}</p>
+            <p>{quest.dee}</p> 
+            Katso oikea vastaus<div class="vast">{quest.answer}</div>   
+            </td> 
+            </tr>          
+            )};
+         
+        }
+        return (
+            <div>
+               <div class="banner"><h1 class="text-shadow">Tietokilpailukysymyksiä</h1></div>
+               <hr class="hr"></hr> 
+                <p>Kysymysten määrä yhteensä: {this.state.questions.length}</p>
+                <table className="table table-striped table-light">
+                   <tbody> 
+                {list}
+                 </tbody>
+                </table>
+            </div>);
+    }
+}
+
+export default QuestionList;
