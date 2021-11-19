@@ -5,7 +5,7 @@ import Question from './Question'
 
 const Home = () => (
     <div className="sivu">
-        <div className="banner"> <h1 className="text-shadow">Tietokilpailu äppi</h1> </div>
+        <div className="banner"> <h1 className="text-shadow">Tietokilpailu</h1> </div>
         <div className="reuna"><br/><p>Tämä on tietokilpailu-demo, joka on toteutettu React-ohjelmistokehyksen avulla. Demoa varten 
             on tehty myös backend API, joka tuottaa SQL-tietokannasta haetut tietokilpailukysymykset json-muodossa. 
             Kysymysten aiheet liittyvät luontoon, tietotekniikkaan ja jouluun.

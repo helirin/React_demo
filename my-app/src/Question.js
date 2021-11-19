@@ -33,7 +33,7 @@ class Question extends React.Component {
         this.setState({vastaus: e.target.value});
         console.log("muutos:",e.target.value );
     }
-     //submit painiketta painettaessa
+     //submit painiketta painettaessa muutetaan tilaa selitys ja count
       handleSubmit(e){
         e.preventDefault();
         console.log("lähetettiin:", this.state.vastaus);
