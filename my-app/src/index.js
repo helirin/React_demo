@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 //import App from './App';
 import reportWebVitals from './reportWebVitals';
-import QuestionList from './QuestionList';
+import RouterApp from './RouterApp';
 
 ReactDOM.render(
   <React.StrictMode>
-   <QuestionList/>
+    <RouterApp/>
+  
   </React.StrictMode>,
   document.getElementById('root')
 );

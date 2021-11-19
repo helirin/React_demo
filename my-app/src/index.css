@@ -14,13 +14,13 @@ code {
 }
 /*omat lisaykset*/
 .vast {
-  background-color: orange;
+  background-color: lightseagreen;
   width: 80px;
   height: 30px;
   padding: 5px;
   margin-top: 10px;
   /*font-size: larger;*/
-  color: orange;
+  color: lightseagreen;
   text-align: center;
 
   border: 1px solid darkblue;
@@ -30,15 +30,67 @@ code {
   background-color: white;
   color: black;
 }
-h1 {
-  text-shadow: 2px 1px 2px white;
-  color: darkblue;
+h1,
+h2 {
+  text-shadow: 2px 1px 2px black;
+  color: white;
   text-align: center;
 }
 .banner {
-  background-color: orange;
+  background-color: lightseagreen;
   height: 60px;
+  border-left: 0px solid lightcyan;
+  border-right: 0px solid lightcyan;
+  border-bottom: 2px solid darkcyan;
+  border-top: 1px solid lightcyan;
+  vertical-align: baseline;
+  padding-top: 5px;
 }
 .hr {
   border: 2px solid darkblue;
+}
+.submit {
+  background-color: lightcyan;
+  color: black;
+  border-radius: 10%;
+}
+.selitys {
+  /*background-color: white;*/
+  color: black;
+  height: 40px;
+  padding: 5px;
+}
+.alapalkki {
+  background-color: lightseagreen;
+  color: black;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid darkcyan;
+}
+.button {
+  background-color: lightcyan;
+  align-content: center;
+  border-radius: 7%;
+}
+.navi {
+  background-color: darkcyan;
+  width: 80px;
+  border-left: 0px solid lightcyan;
+  border-right: 1px solid lightcyan;
+  border-bottom: 0px solid lightcyan;
+  border-top: 0px solid lightcyan;
+  color: white;
+}
+.navipalkki {
+  background-color: darkcyan;
+  border-left: 1px solid lightcyan;
+  border-right: 1px solid lightcyan;
+  border-top: 2px solid lightseagreen;
+  border-bottom: 0px solid lightcyan;
+}
+.sivu {
+  border: 1px solid lightgrey;
+}
+.reuna {
+  padding-left: 10px;
 }

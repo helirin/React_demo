@@ -1,6 +1,6 @@
 import React from 'react';
 //haetaan kysymykset Quiz Apista
-//otetaan luontoaiheiset kysymykset listaan
+//otetaan kaikki kysymykset listaan
 class QuestionList extends React.Component {
     //konstruktori
     constructor(props) {
@@ -30,7 +30,7 @@ class QuestionList extends React.Component {
         let list = [];
         for (let index = 0; index < this.state.questions.length; index++) {
             const quest = this.state.questions[index];
-            if(quest.topicId ==="Luo"){                        //& index<10
+            //liitetään tiedot listaan
             list.push(<tr key={index}>
             <td><br/><p><b>{index+1}. {quest.question}</b></p>
             <hr></hr>
@@ -41,7 +41,7 @@ class QuestionList extends React.Component {
             Katso oikea vastaus<div class="vast">{quest.answer}</div>   
             </td> 
             </tr>          
-            )};
+            );
          
         }
         return (
